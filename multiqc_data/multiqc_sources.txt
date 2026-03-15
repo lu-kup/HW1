@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+RSeQC	gene_body_coverage	SRR11647705	/home/genetics/HW1/outputs/gene_body_coverage.geneBodyCoverage.txt
+RSeQC	inner_distance	inner_distance	/home/genetics/HW1/outputs/inner_distance.inner_distance_freq.txt
+RSeQC	infer_experiment	infer_experiment	/home/genetics/HW1/outputs/infer_experiment.out

@@ -1,4 +1,5 @@
 references/*
 raw_data/*
 mapping_outputs/*
+reads_trimmed/*
 tmux*

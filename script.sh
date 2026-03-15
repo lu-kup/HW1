@@ -58,3 +58,11 @@ multiqc outputs
 
 featureCounts -T 8 -a references/gencode.v49.annotation.gtf.gz -o outputs/feature_counts.out \
 -s 0 -p -t exon -g gene_id mapping_outputs/*.sorted.bam
+
+zcat references/gencode.v49.annotation.gtf.gz \
+| awk '$3=="gene" { 
+    match($0, /gene_name "([^"]+)"/, a); 
+    match($0, /gene_type "([^"]+)"/, b); 
+    match($0, /gene_id "([^"]+)"/, c); 
+    print a[1] "," b[1] "," c[1]
+}' > outputs/gene_table.out

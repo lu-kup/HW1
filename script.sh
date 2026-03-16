@@ -44,6 +44,7 @@ cp download raw_data/hg38_GENCODE_V47.bed.gz
 rm download
 
 gunzip raw_data/hg38_GENCODE_V47.bed.gz
+
 geneBody_coverage.py -r raw_data/hg38_GENCODE_V47.bed -i mapping_outputs/*.sorted.bam -o outputs/gene_body_coverage
 inner_distance.py -r raw_data/hg38_GENCODE_V47.bed -i mapping_outputs/*.sorted.bam -o outputs/inner_distance
 clipping_profile.py -s "PE" -i mapping_outputs/*.sorted.bam -o outputs/clipping_profile

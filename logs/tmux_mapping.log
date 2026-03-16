@@ -1,0 +1,679 @@
+(base) genetics@valdovas:~/HW1$ tmux detach
+(base) genetics@valdovas:~/HW1$ chmod 777 script_rerun2.sh
+(base) genetics@valdovas:~/HW1$ ./script_rerun2.sh
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647705.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 23:13:56
+Creating PatternSource: 23:13:56
+Opening hit output file: 23:13:56
+About to initialize fw GFM: 23:13:56
+Trying references/indexed
+  About to open input files: 23:13:56
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:13:56
+  Reading header: 23:13:56
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 23:13:56
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 23:13:56
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:13:56
+  Reading header: 23:13:56
+Reading plen (194): 23:13:56
+Reading rstarts (3720): 23:13:56
+Reading ebwt (982875968): 23:13:56
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[
+[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[BReading fchr (5)
+Reading ftab (1048577): 23:14:02
+Reading eftab (20): 23:14:02
+Reading offs (184289235 32-bit words): 23:14:02
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[
+[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[BHeaders:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 23:14:06
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 23:14:06
+  Reading header: 23:14:06
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 23:14:19
+Dispatching to search driver: 23:14:27
+22830957 reads; of these:
+  22830957 (100.00%) were paired; of these:
+    1180473 (5.17%) aligned concordantly 0 times
+    20270615 (88.79%) aligned concordantly exactly 1 time
+    1379869 (6.04%) aligned concordantly >1 times
+    ----
+    1180473 pairs aligned concordantly 0 times; of these:
+      96664 (8.19%) aligned discordantly 1 time
+    ----
+    1083809 pairs aligned 0 times concordantly or discordantly; of these:
+      2167618 mates make up the pairs; of these:
+        1248025 (57.58%) aligned 0 times
+        830951 (38.33%) aligned exactly 1 time
+        88642 (4.09%) aligned >1 times
+97.27% overall alignment rate
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647706.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 23:27:25
+Creating PatternSource: 23:27:25
+Opening hit output file: 23:27:25
+About to initialize fw GFM: 23:27:25
+Trying references/indexed
+  About to open input files: 23:27:25
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:27:25
+  Reading header: 23:27:25
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 23:27:25
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 23:27:25
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:27:25
+  Reading header: 23:27:25
+Reading plen (194): 23:27:25
+Reading rstarts (3720): 23:27:25
+Reading ebwt (982875968): 23:27:25
+Reading fchr (5)
+Reading ftab (1048577): 23:27:31
+Reading eftab (20): 23:27:31
+Reading offs (184289235 32-bit words): 23:27:31
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 23:27:34
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 23:27:34
+  Reading header: 23:27:34
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 23:27:40
+Dispatching to search driver: 23:27:47
+22247819 reads; of these:
+  22247819 (100.00%) were paired; of these:
+    1178589 (5.30%) aligned concordantly 0 times
+    20207142 (90.83%) aligned concordantly exactly 1 time
+    862088 (3.87%) aligned concordantly >1 times
+    ----
+    1178589 pairs aligned concordantly 0 times; of these:
+      92467 (7.85%) aligned discordantly 1 time
+    ----
+    1086122 pairs aligned 0 times concordantly or discordantly; of these:
+      2172244 mates make up the pairs; of these:
+        1250405 (57.56%) aligned 0 times
+        859856 (39.58%) aligned exactly 1 time
+        61983 (2.85%) aligned >1 times
+97.19% overall alignment rate
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647707.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 23:40:19
+Creating PatternSource: 23:40:19
+Opening hit output file: 23:40:19
+About to initialize fw GFM: 23:40:19
+Trying references/indexed
+  About to open input files: 23:40:19
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:40:19
+  Reading header: 23:40:19
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 23:40:19
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 23:40:19
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:40:19
+  Reading header: 23:40:19
+Reading plen (194): 23:40:19
+Reading rstarts (3720): 23:40:19
+Reading ebwt (982875968): 23:40:19
+Reading fchr (5)
+Reading ftab (1048577): 23:40:23
+Reading eftab (20): 23:40:23
+Reading offs (184289235 32-bit words): 23:40:23
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 23:40:24
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 23:40:24
+  Reading header: 23:40:24
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 23:40:30
+Dispatching to search driver: 23:40:38
+22078871 reads; of these:
+  22078871 (100.00%) were paired; of these:
+    1077514 (4.88%) aligned concordantly 0 times
+    19969360 (90.45%) aligned concordantly exactly 1 time
+    1031997 (4.67%) aligned concordantly >1 times
+    ----
+    1077514 pairs aligned concordantly 0 times; of these:
+      72644 (6.74%) aligned discordantly 1 time
+    ----
+    1004870 pairs aligned 0 times concordantly or discordantly; of these:
+      2009740 mates make up the pairs; of these:
+        1162201 (57.83%) aligned 0 times
+        772587 (38.44%) aligned exactly 1 time
+        74952 (3.73%) aligned >1 times
+97.37% overall alignment rate
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647708.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 23:52:45
+Creating PatternSource: 23:52:45
+Opening hit output file: 23:52:45
+About to initialize fw GFM: 23:52:45
+Trying references/indexed
+  About to open input files: 23:52:45
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:52:45
+  Reading header: 23:52:45
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 23:52:45
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 23:52:45
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 23:52:45
+  Reading header: 23:52:45
+Reading plen (194): 23:52:45
+Reading rstarts (3720): 23:52:45
+Reading ebwt (982875968): 23:52:45
+Reading fchr (5)
+Reading ftab (1048577): 23:52:49
+Reading eftab (20): 23:52:49
+Reading offs (184289235 32-bit words): 23:52:49
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 23:52:49
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 23:52:49
+  Reading header: 23:52:49
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 23:52:55
+Dispatching to search driver: 23:53:02
+22642234 reads; of these:
+  22642234 (100.00%) were paired; of these:
+    1084503 (4.79%) aligned concordantly 0 times
+    20798645 (91.86%) aligned concordantly exactly 1 time
+    759086 (3.35%) aligned concordantly >1 times
+    ----
+    1084503 pairs aligned concordantly 0 times; of these:
+      85722 (7.90%) aligned discordantly 1 time
+    ----
+    998781 pairs aligned 0 times concordantly or discordantly; of these:
+      1997562 mates make up the pairs; of these:
+        1128426 (56.49%) aligned 0 times
+        814971 (40.80%) aligned exactly 1 time
+        54165 (2.71%) aligned >1 times
+97.51% overall alignment rate
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647709.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 00:05:08
+Creating PatternSource: 00:05:08
+Opening hit output file: 00:05:08
+About to initialize fw GFM: 00:05:08
+Trying references/indexed
+  About to open input files: 00:05:08
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 00:05:08
+  Reading header: 00:05:08
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 00:05:08
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 00:05:08
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 00:05:08
+  Reading header: 00:05:08
+Reading plen (194): 00:05:08
+Reading rstarts (3720): 00:05:08
+Reading ebwt (982875968): 00:05:08
+Reading fchr (5)
+Reading ftab (1048577): 00:05:11
+Reading eftab (20): 00:05:11
+Reading offs (184289235 32-bit words): 00:05:11
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 00:05:12
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 00:05:12
+  Reading header: 00:05:12
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 00:05:17
+Dispatching to search driver: 00:05:24
+22443533 reads; of these:
+  22443533 (100.00%) were paired; of these:
+    1079806 (4.81%) aligned concordantly 0 times
+    20496842 (91.33%) aligned concordantly exactly 1 time
+    866885 (3.86%) aligned concordantly >1 times
+    ----
+    1079806 pairs aligned concordantly 0 times; of these:
+      82709 (7.66%) aligned discordantly 1 time
+    ----
+    997097 pairs aligned 0 times concordantly or discordantly; of these:
+      1994194 mates make up the pairs; of these:
+        1150851 (57.71%) aligned 0 times
+        785177 (39.37%) aligned exactly 1 time
+        58166 (2.92%) aligned >1 times
+97.44% overall alignment rate
+Applying preset: 'sensitive' using preset menu 'V0'
+Final policy string: 'SEED=0,22;DPS=15;ROUNDS=2;IVAL=S,1,1.15'
+Input bt2 file: "references/indexed"
+Query inputs (DNA, FASTQ):
+Quality inputs:
+Output file: "SRR11647710.sam"
+Local endianness: little
+Sanity checking: disabled
+Assertions: disabled
+Entered driver(): 00:17:17
+Creating PatternSource: 00:17:17
+Opening hit output file: 00:17:17
+About to initialize fw GFM: 00:17:17
+Trying references/indexed
+  About to open input files: 00:17:17
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 00:17:17
+  Reading header: 00:17:17
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+Reading plen (194): 00:17:17
+Opening "references/indexed.7.ht2"
+Opening "references/indexed.8.ht2"
+  About to open input files: 00:17:17
+Opening "references/indexed.1.ht2"
+Opening "references/indexed.2.ht2"
+  Finished opening input files: 00:17:17
+  Reading header: 00:17:17
+Reading plen (194): 00:17:17
+Reading rstarts (3720): 00:17:17
+Reading ebwt (982875968): 00:17:17
+Reading fchr (5)
+Reading ftab (1048577): 00:17:20
+Reading eftab (20): 00:17:21
+Reading offs (184289235 32-bit words): 00:17:21
+Headers:
+    len: 2948627755
+    gbwtLen: 2948627756
+    nodes: 2948627756
+    sz: 737156939
+    gbwtSz: 737156940
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 184289235
+    offsSz: 737156940
+    lineSz: 64
+    sideSz: 64
+    sideGbwtSz: 48
+    sideGbwtLen: 192
+    numSides: 15357437
+    numLines: 15357437
+    gbwtTotLen: 982875968
+    gbwtTotSz: 982875968
+    reverse: 0
+    linearFM: Yes
+  About to open input files: 00:17:22
+Opening "references/indexed.5.ht2"
+Opening "references/indexed.6.ht2"
+  Finished opening input files: 00:17:22
+  Reading header: 00:17:22
+    number of local indexes: 55172
+    local offRate: 3
+    local ftabLen: 4096
+    local ftabSz: 8192
+Read 194 reference strings from 1264 records: 00:17:30
+Dispatching to search driver: 00:17:37
+22385725 reads; of these:
+  22385725 (100.00%) were paired; of these:
+    1048252 (4.68%) aligned concordantly 0 times
+    20447747 (91.34%) aligned concordantly exactly 1 time
+    889726 (3.97%) aligned concordantly >1 times
+    ----
+    1048252 pairs aligned concordantly 0 times; of these:
+      51024 (4.87%) aligned discordantly 1 time
+    ----
+    997228 pairs aligned 0 times concordantly or discordantly; of these:
+      1994456 mates make up the pairs; of these:
+        1141154 (57.22%) aligned 0 times
+        787447 (39.48%) aligned exactly 1 time
+        65855 (3.30%) aligned >1 times
+97.45% overall alignment rate
+(base) genetics@valdovas:~/HW1$ tmux capture-pane -p -S - > tmux_mapping.log
+

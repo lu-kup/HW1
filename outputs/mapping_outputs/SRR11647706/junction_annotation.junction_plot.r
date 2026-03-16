@@ -1,0 +1,8 @@
+pdf("outputs/mapping_outputs/SRR11647706/junction_annotation.splice_events.pdf")
+events=c(0.6394840310444279,0.9907473380673755,98.22592228639554)
+pie(events,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing events",labels=c("partial_novel 1%","complete_novel 1%","known 98%"))
+dev.off()
+pdf("outputs/mapping_outputs/SRR11647706/junction_annotation.splice_junction.pdf")
+junction=c(13.740711579154569,19.207552121778782,67.05173629906665)
+pie(junction,col=c(2,3,4),init.angle=30,angle=c(60,120,150),density=c(70,70,70),main="splicing junctions",labels=c("partial_novel 14%","complete_novel 19%","known 67%"))
+dev.off()

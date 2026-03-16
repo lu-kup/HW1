@@ -306,3 +306,145 @@ boxplot(
 
 grid()
 dev.off()
+
+# Biological analysis
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(enrichplot)
+library(msigdbr)
+
+# Q1
+res_df <- res_shrunk %>%
+  as.data.frame() %>%
+  rownames_to_column("gene") %>%
+  arrange(padj) %>%
+  mutate(
+    significance = case_when(
+      padj < 0.05 & log2FoldChange >  1 ~ "Up",
+      padj < 0.05 & log2FoldChange < -1 ~ "Down",
+      TRUE ~ "NS"  # Not Significant
+    ),
+    significance = factor(significance, levels = c("Up", "Down", "NS"))
+  )
+
+# Count how many in each category
+table(res_df$significance)
+
+top_upregulated <- res_df %>% filter(significance == "Up") %>% head(3) %>%
+  dplyr::select(gene, log2FoldChange, padj)
+
+top_downregulated <- res_df %>% filter(significance == "Down") %>% head(3) %>%
+  dplyr::select(gene, log2FoldChange, padj)
+
+write.csv(top_upregulated, "outputs/top_upregulated.csv")
+write.csv(top_downregulated, "outputs/top_downregulated.csv")
+
+# Q2
+# Prepare data
+sig_up   <- res_df %>% filter(significance == "Up")   %>% pull(gene)
+sig_down <- res_df %>% filter(significance == "Down")  %>% pull(gene)
+sig_all  <- res_df %>% filter(significance != "NS")    %>% pull(gene)
+
+cat("Upregulated:", length(sig_up), "genes\n")
+cat("Downregulated:", length(sig_down), "genes\n")
+cat("Total significant:", length(sig_all), "genes\n")
+
+ranked_list <- res_df %>%
+  filter(!is.na(log2FoldChange), !is.na(padj)) %>%
+  arrange(desc(log2FoldChange)) %>%
+  dplyr::select(gene, log2FoldChange)
+
+gene_ranks <- setNames(ranked_list$log2FoldChange, ranked_list$gene)
+cat("\nRanked list length:", length(gene_ranks), "\n")
+
+cat("Range of log2FC:", round(range(gene_ranks), 2), "\n")
+
+# Map gene symbols to Entrez IDs (required by KEGG)
+sig_entrez <- bitr(
+  sig_all,
+  fromType = "ENSEMBL",
+  toType   = c("ENTREZID", "SYMBOL"),
+  OrgDb    = org.Hs.eg.db
+)
+
+cat("Mapped", nrow(sig_entrez), "of", length(sig_all), "genes to Entrez IDs\n")
+
+# ORA GO
+ego <- enrichGO(
+  gene = sig_entrez$ENTREZID,
+  OrgDb = org.Hs.eg.db,
+  keyType = "ENTREZID",
+  ont = "ALL",          # BP, MF, CC all included
+  pAdjustMethod = "BH",
+  pvalueCutoff = 0.05,
+  qvalueCutoff = 0.05,
+  readable = TRUE       # convert back to gene symbols for visualization
+)
+
+png("outputs/go_barplot.png", width = 1000, height = 800)
+barplot(ego, showCategory = 20, title = "Top GO terms")
+dev.off()
+
+png("outputs/go_dotplot.png", width = 1000, height = 800)
+dotplot(ego, showCategory = 20, title = "GO Enrichment Dotplot")
+dev.off()
+
+# Q3
+ranked_df <- data.frame(gene = names(gene_ranks), log2FC = gene_ranks) %>%
+  arrange(desc(log2FC))
+
+gene_entrez_map <- bitr(
+  ranked_df$gene,
+  fromType = "ENSEMBL",
+  toType = c("ENTREZID", "SYMBOL"),
+  OrgDb = org.Hs.eg.db
+)
+
+ranked_df <- merge(ranked_df, gene_entrez_map, by.x = "gene", by.y = "ENSEMBL")  %>%
+  arrange(desc(log2FC))
+gene_ranks_entrez <- setNames(ranked_df$log2FC, ranked_df$ENTREZID)
+
+# GSEA GO
+gsea_go <- gseGO(
+  geneList = gene_ranks_entrez,
+  OrgDb = org.Hs.eg.db,
+  ont = "ALL",             # BP, MF, CC
+  keyType = "ENTREZID",
+  minGSSize = 10,
+  maxGSSize = 500,
+  pvalueCutoff = 0.05,
+  verbose = FALSE
+)
+
+png("outputs/gsea_go_top.png", width = 800, height = 600)
+gseaplot2(
+  gsea_go,
+  geneSetID = gsea_go@result$ID[1],
+  title = gsea_go@result$Description[1]
+)
+dev.off()
+
+png("outputs/gsea_go_ridge.png", width = 900, height = 700)
+ridgeplot(gsea_go, showCategory = 20)
+dev.off()
+
+# GSEA MSigDB
+msig_h <- msigdbr(species = "Homo sapiens", category = "H")
+msig_list <- split(msig_h$entrez_gene, msig_h$gs_name)
+
+msig_df <- msig_h %>%
+  dplyr::select(gs_name, entrez_gene) %>%  # columns: TERM, GENE
+  dplyr::rename(TERM = gs_name, GENE = entrez_gene)
+
+head(msig_df)
+
+gsea_msig <- GSEA(
+  gene_ranks_entrez,
+  TERM2GENE = msig_df,
+  pvalueCutoff = 0.05,
+  verbose = FALSE
+)
+
+png("outputs/gsea_msig_dotplot.png", width = 900, height = 700)
+dotplot(gsea_msig, showCategory = 20, title = "Top GSEA MSigDB Hallmark Terms")
+dev.off()
